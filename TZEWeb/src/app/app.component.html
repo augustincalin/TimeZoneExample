@@ -1,0 +1,35 @@
+<div id="main">
+    <div id="header">
+        <h1>Time zone Example App</h1>
+    </div>
+    <div id="container">
+        <div class="col1">
+            <p>Enter name:</p>
+            <input type="text" [(ngModel)]="event.name">
+            <p>Select START date and time:</p>
+            <kendo-datetimepicker [format]="format"
+                                  [(value)]="event.startTime">
+            </kendo-datetimepicker>
+            <p>Select END date and time:</p>
+            <kendo-datetimepicker [format]="format"
+                                  [(value)]="event.endTime">
+            </kendo-datetimepicker>
+            <p>Click to Add event</p>
+            <button (click)="addEvent()">Add</button>
+        </div>
+        <div class="col2">
+            <kendo-grid [data]="gridDataResult"
+                        [height]="510">
+                <kendo-grid-column field="id"
+                                   [width]="140"></kendo-grid-column>
+                <kendo-grid-column field="name"
+                                   [width]="120"></kendo-grid-column>
+                <kendo-grid-column field="startTime"
+                                   [width]="100"></kendo-grid-column>
+                <kendo-grid-column field="endTime"
+                                   [width]="130"
+                                   format="{0:g}"></kendo-grid-column>
+            </kendo-grid>
+        </div>
+    </div>
+</div>

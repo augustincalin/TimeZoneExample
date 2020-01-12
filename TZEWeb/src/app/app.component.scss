@@ -1,0 +1,27 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    #header {
+        flex: 0 1 50px;
+        background-color: silver;
+        padding: 10px;
+    }
+    #container {
+        padding-top: 20px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: row;
+        .col1 {
+            flex: 0 0 350px;
+            .label {
+                display: block;
+                font-weight: bold;
+                text-indent: 8px;
+                color: #656565;
+              }
+        }
+        .col2 {
+            flex: 1 1 auto;
+        }
+    }
+}
